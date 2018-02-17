@@ -4,6 +4,7 @@ using KataNumbersInWords;
 
 namespace KataNumbersInWordsTests
 {
+    [TestFixture]
     public class NumberTranslatorShould
     {
         [TestCase(1.0, "$", "One dollar")]
@@ -18,6 +19,11 @@ namespace KataNumbersInWordsTests
         [TestCase(0.1, "$", "Ten cents")]
         [TestCase(1.01, "$", "One dollar and One cent")]
         [TestCase(99.01, "$", "Ninety Nine dollars and One cent")]
+        [TestCase(99.121, "#", "Ninety Nine dinars and One dirham and Two kirshs and One fils")]
+        [TestCase(0.915, "#", "Nine dirhams and One kirsh and Five filss")]
+        [TestCase(1.001, "#", "One dinar and One fils")]
+        [TestCase(30.98, "#", "Thirty dinars and Nine dirhams and Eight kirshs")]
+        [TestCase(68.50, "#", "Sixty Eight dinars and Five dirhams")]
         public void ReturnCorrespondingWordsToInputNumberAndCurrency(double number, string currencySymbol, string words)
         {
             var numberTranslator = new NumberTranslator();

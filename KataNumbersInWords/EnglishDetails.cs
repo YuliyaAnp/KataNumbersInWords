@@ -46,7 +46,22 @@ namespace KataNumbersInWords
                 {"$", new List<KeyValuePair<string, double>>
                     {
                         new KeyValuePair<string, double>("dollar", 1),
-                        new KeyValuePair<string, double>("cent", 0.01)
+                        new KeyValuePair<string, double>("cent", 100)
+                    }
+                },
+                {"#", new List<KeyValuePair<string, double>>
+                    {
+                        new KeyValuePair<string, double>("dinar", 1),
+                        new KeyValuePair<string, double>("dirham", 10),
+                        new KeyValuePair<string, double>("kirsh", 100),
+                        new KeyValuePair<string, double>("fils", 1000)
+                    }
+                },
+                {"&", new List<KeyValuePair<string, double>>
+                    {
+                        new KeyValuePair<string, double>("pound", 1),
+                        new KeyValuePair<string, double>("shilling", 20),
+                        new KeyValuePair<string, double>("pence", 240)
                     }
                 }
             };
